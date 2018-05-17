@@ -3,17 +3,13 @@ import './Choices.css';
 
 class Choices extends Component {
 
-    state = {
-        guesses : []
-    }
-
     sendGuess = async (color) => {
-        if (this.state.guesses.length >= 4) {
+        if (this.props.guesses.length >= 4) {
             console.log('Guesses full...');
         } else {
-            await this.setState(prevState => ({ 'guesses': [...prevState.guesses, color] }));
+            await this.props.guesses.push(color);
         }
-        console.log(this.state.guesses);
+        console.log(this.props.guesses);
     }
 
 	render() {

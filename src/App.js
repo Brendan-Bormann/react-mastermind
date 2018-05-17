@@ -1,24 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Main from './Components/Main/Main';
-import Choices from './Components/Choices/Choices';
+import Mastermind from './Components/Mastermind/Mastermind';
 
 class App extends Component {
-
-	state = {
-		guesses: [],
-	}
-
-	updateGuess = guess => {
-		this.setState({ 'guesses': ...this.state.guesses, guess});
-	}
 
 	render() {
 		return (
 			<div className="App">
-				<Main />
-				<Choices guesses={this.state.guesses} updateGuess={this.updateGuess}/>
+				<h1>MASTERMIND</h1>
+				<Mastermind />
 			</div>
 		);
 	}
