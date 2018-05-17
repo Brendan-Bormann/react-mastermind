@@ -1,0 +1,11 @@
+.Main {
+    width: 1000px;
+    height: 400px;
+    margin: 75px auto;
+
+    display: flex;
+
+
+    border: 10px solid black;
+    border-radius: 25px;
+}

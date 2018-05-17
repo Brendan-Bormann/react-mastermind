@@ -1,0 +1,60 @@
+.Choices {
+    display: flex;
+    height: 100px;
+    width: 1000px;
+    margin: 0 auto;
+
+    justify-content: space-around;
+    align-items: center;
+    
+    border: 10px solid black;
+    border-radius: 25px;
+}
+
+.circle {
+    width: 75px;
+    height: 75px;
+
+    border: 5px solid black;
+    border-radius: 100px;
+}
+
+.circle-sm {
+    width: 25px;
+    height: 25px;
+
+    border: 2px solid black;
+    border-radius: 100px;
+}
+
+.white {
+    background-color: white;
+}
+
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.black {
+    background-color: black;
+}
