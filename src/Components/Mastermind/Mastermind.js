@@ -146,10 +146,7 @@ class Mastermind extends Component {
         } else if (this.state.guess10.length !== 4 && this.state.guesses.length === 4) {
             await this.setState({ 'guess10': this.state.guesses });
             this.clearGuess();
-            this.compareGuess(this.state.guess10, 10);
-        } else if (this.state.guess10.length === 4) {
-            alert('You lost.');
-            window.location.reload();
+            this.compareGuess(this.state.guess10, 10);   
         } else {
             alert('Guess is invalid.');
         }
@@ -172,8 +169,6 @@ class Mastermind extends Component {
         }
         var stateItem = 'guess' + guessNum.toString() + 'correct';
         var response = [fullCorrect, partCorrect];
-        console.log(stateItem);
-        console.log(...response);
         await this.setState({ [stateItem]: [...response] });
         if (fullCorrect === 4) {
             window.localStorage.wins = parseInt(window.localStorage.wins, 10) + 1;
@@ -181,6 +176,9 @@ class Mastermind extends Component {
             if (playAgain) {
                 window.location.reload();
             }
+        } else if (guessNum === 10) {
+            alert(`You lost. The answer was ${this.state.answer.join(" ")}.`);
+            window.location.reload();
         }
     }
 
@@ -200,12 +198,12 @@ class Mastermind extends Component {
                 <hr />
                 <span className="guesses-made">
                     <div className="guess-zone">
-                        <div className="score correct-spot">Full</div>
+                        <div className="score correct-spot score-title">Full</div>
                         <div className='circle'></div>
                         <div className='circle'></div>
                         <div className='circle'></div>
                         <div className='circle'></div>
-                        <div className="score correct-color">Part</div>
+                        <div className="score correct-color score-title">Part</div>
                     </div>
                     <div className="guess-zone one">
                         <div className="score correct-spot">{this.state.guess1correct[0]}</div>

@@ -45,7 +45,7 @@
 
     padding: 10px;
     margin: 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: 20px;
     color: white;
     background: rgb(22, 22, 22);
@@ -103,15 +103,15 @@
     background: rgb(59, 59, 59);
 }
 
-.score-title {
-    color: white;
-    font-size: 40px;
-    font-family: monospace;
-}
-
 .score {
     color: white;
     font-size: 45px;
+    font-family: monospace;
+}
+
+.score-title {
+    color: white;
+    font-size: 40px;
     font-family: 'Orbitron', sans-serif;
 }
 
