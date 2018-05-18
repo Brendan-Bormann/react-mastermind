@@ -30,7 +30,7 @@ class Mastermind extends Component {
         fade: 'animated fadeIn'
     }
 
-    Greeting = () => {
+    Intro = () => {
         if (this.state.answer.length === 4) {
             return (
                 <span className="guess-area">
@@ -91,8 +91,6 @@ class Mastermind extends Component {
         });
 
         await this.setState({ 'answer': answer});
-        console.log(this.state.answer);
-        console.log(localStorage);
     }
     
     addGuess = async (color) => {
@@ -101,7 +99,6 @@ class Mastermind extends Component {
         } else {
             await this.setState({ 'guesses': [...this.state.guesses, color] });
         }
-        console.log(this.state.fade);
     }
 
     clearGuess = () => {
@@ -150,8 +147,11 @@ class Mastermind extends Component {
             await this.setState({ 'guess10': this.state.guesses });
             this.clearGuess();
             this.compareGuess(this.state.guess10, 10);
+        } else if (this.state.guess10.length === 4) {
+            alert('You lost.');
+            window.location.reload();
         } else {
-            console.log('Failed to find open slot.');
+            alert('Guess is invalid.');
         }
     }
 
@@ -176,20 +176,18 @@ class Mastermind extends Component {
         console.log(...response);
         await this.setState({ [stateItem]: [...response] });
         if (fullCorrect === 4) {
-            var playAgain = window.confirm('You won! Play again?');
+            window.localStorage.wins = parseInt(window.localStorage.wins, 10) + 1;
+            var playAgain = window.confirm(`You won! Total wins: ${window.localStorage.wins}. Play again?`);
             if (playAgain) {
-                window.localStorage.wins = parseInt(window.localStorage.wins) + 1;
-                console.log(`Stored wins: ${localStorage.wins}`);
                 window.location.reload();
             }
         }
-        console.log(this.state);
     }
 
 	render() {
 		return (
 			<div className="Mastermind">
-                <this.Greeting />
+                <this.Intro />
                 <hr />
                 <span className='guess-preview'>
                     <div className={'circle-lgr placeHolder ' + this.state.guesses[0] + " " + this.state.fade}></div>
