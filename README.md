@@ -1,5 +1,7 @@
 # **MASTERMIND**
 
+**Play it here:** https://pooks-in-boots.github.io/react-mastermind/
+
 ## React MasterMind
 
 This is a react-built variation of the poplular boardgame `Mastermind`
