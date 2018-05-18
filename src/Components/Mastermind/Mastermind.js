@@ -182,6 +182,26 @@ class Mastermind extends Component {
         }
     }
 
+    scoreColor = value => {
+        switch (value) {
+            case 0:
+                return "";
+                break;
+            case 1:
+                return "score-one";
+                break;
+            case 2:
+                return "score-two";
+                break;
+            case 3:
+                return "score-three";
+                break;
+            case 4:
+                return "score-four";
+                break;
+        }
+    }
+
 	render() {
 		return (
 			<div className="Mastermind">
@@ -206,84 +226,84 @@ class Mastermind extends Component {
                         <div className="score correct-color score-title">Part</div>
                     </div>
                     <div className="guess-zone one">
-                        <div className="score correct-spot">{this.state.guess1correct[0]}</div>
+                        <div className={'score correct-spot ' + this.scoreColor(this.state.guess1correct[0])}>{this.state.guess1correct[0]}</div>
                         <div className={'circle ' + this.state.guess1[0]}></div>
                         <div className={'circle ' + this.state.guess1[1]}></div>
                         <div className={'circle ' + this.state.guess1[2]}></div>
                         <div className={'circle ' + this.state.guess1[3]}></div>
-                        <div className="score correct-color">{this.state.guess1correct[1]}</div>
+                        <div className={"score correct-color " + this.scoreColor(this.state.guess1correct[1])}>{this.state.guess1correct[1]}</div>
                     </div>
                     <div className="guess-zone two">
-                        <div className="score correct-spot">{this.state.guess2correct[0]}</div>
+                        <div className={"score correct-spot " + this.scoreColor(this.state.guess2correct[0])}>{this.state.guess2correct[0]}</div>
                         <div className={'circle ' + this.state.guess2[0]}></div>
                         <div className={'circle ' + this.state.guess2[1]}></div>
                         <div className={'circle ' + this.state.guess2[2]}></div>
                         <div className={'circle ' + this.state.guess2[3]}></div>
-                        <div className="score correct-color">{this.state.guess2correct[1]}</div>
+                        <div className={"score correct-color " + this.scoreColor(this.state.guess2correct[1])}>{this.state.guess2correct[1]}</div>
                     </div>
                     <div className="guess-zone one">
-                        <div className="score correct-spot">{this.state.guess3correct[0]}</div>
+                        <div className={"score correct-spot " + this.scoreColor(this.state.guess3correct[0])}>{this.state.guess3correct[0]}</div>
                         <div className={'circle ' + this.state.guess3[0]}></div>
                         <div className={'circle ' + this.state.guess3[1]}></div>
                         <div className={'circle ' + this.state.guess3[2]}></div>
                         <div className={'circle ' + this.state.guess3[3]}></div>
-                        <div className="score correct-color">{this.state.guess3correct[1]}</div>
+                        <div className={"score correct-color " + this.scoreColor(this.state.guess3correct[1])}>{this.state.guess3correct[1]}</div>
                     </div>
                     <div className="guess-zone two">
-                        <div className="score correct-spot">{this.state.guess4correct[0]}</div>
+                        <div className={"score correct-spot " + this.scoreColor(this.state.guess4correct[0])}>{this.state.guess4correct[0]}</div>
                         <div className={'circle ' + this.state.guess4[0]}></div>
                         <div className={'circle ' + this.state.guess4[1]}></div>
                         <div className={'circle ' + this.state.guess4[2]}></div>
                         <div className={'circle ' + this.state.guess4[3]}></div>
-                        <div className="score correct-color">{this.state.guess4correct[1]}</div>
+                        <div className={"score correct-color " + this.scoreColor(this.state.guess4correct[1])}>{this.state.guess4correct[1]}</div>
                     </div>
                     <div className="guess-zone one">
-                        <div className="score correct-spot">{this.state.guess5correct[0]}</div>
+                        <div className={"score correct-spot " + this.scoreColor(this.state.guess5correct[0])}>{this.state.guess5correct[0]}</div>
                         <div className={'circle ' + this.state.guess5[0]}></div>
                         <div className={'circle ' + this.state.guess5[1]}></div>
                         <div className={'circle ' + this.state.guess5[2]}></div>
                         <div className={'circle ' + this.state.guess5[3]}></div>
-                        <div className="score correct-color">{this.state.guess5correct[1]}</div>
+                        <div className={"score correct-color " + this.scoreColor(this.state.guess5correct[1])}>{this.state.guess5correct[1]}</div>
                     </div>
                     <div className="guess-zone two">
-                        <div className="score correct-spot">{this.state.guess6correct[0]}</div>
+                        <div className={"score correct-spot " + this.scoreColor(this.state.guess6correct[0])}>{this.state.guess6correct[0]}</div>
                         <div className={'circle ' + this.state.guess6[0]}></div>
                         <div className={'circle ' + this.state.guess6[1]}></div>
                         <div className={'circle ' + this.state.guess6[2]}></div>
                         <div className={'circle ' + this.state.guess6[3]}></div>
-                        <div className="score correct-color">{this.state.guess6correct[1]}</div>
+                        <div className={"score correct-color " + this.scoreColor(this.state.guess6correct[1])}>{this.state.guess6correct[1]}</div>
                     </div>
                     <div className="guess-zone one">
-                        <div className="score correct-spot">{this.state.guess7correct[0]}</div>
+                        <div className={"score correct-spot " + this.scoreColor(this.state.guess7correct[0])}>{this.state.guess7correct[0]}</div>
                         <div className={'circle ' + this.state.guess7[0]}></div>
                         <div className={'circle ' + this.state.guess7[1]}></div>
                         <div className={'circle ' + this.state.guess7[2]}></div>
                         <div className={'circle ' + this.state.guess7[3]}></div>
                         <div className="score correct-color">{this.state.guess7correct[1]}</div>
                     </div>
-                    <div className="guess-zone one">
-                        <div className="score correct-spot">{this.state.guess8correct[0]}</div>
+                    <div className="guess-zone two">
+                        <div className={"score correct-spot " + this.scoreColor(this.state.guess8correct[0])}>{this.state.guess8correct[0]}</div>
                         <div className={'circle ' + this.state.guess8[0]}></div>
                         <div className={'circle ' + this.state.guess8[1]}></div>
                         <div className={'circle ' + this.state.guess8[2]}></div>
                         <div className={'circle ' + this.state.guess8[3]}></div>
-                        <div className="score correct-color">{this.state.guess8correct[1]}</div>
+                        <div className={"score correct-color " + this.scoreColor(this.state.guess8correct[1])}>{this.state.guess8correct[1]}</div>
                     </div>
-                    <div className="guess-zone two">
-                        <div className="score correct-spot">{this.state.guess9correct[0]}</div>
+                    <div className="guess-zone one">
+                        <div className={"score correct-spot " + this.scoreColor(this.state.guess9correct[0])}>{this.state.guess9correct[0]}</div>
                         <div className={'circle ' + this.state.guess9[0]}></div>
                         <div className={'circle ' + this.state.guess9[1]}></div>
                         <div className={'circle ' + this.state.guess9[2]}></div>
                         <div className={'circle ' + this.state.guess9[3]}></div>
-                        <div className="score correct-color">{this.state.guess9correct[1]}</div>
+                        <div className={"score correct-color" + this.scoreColor(this.state.guess9correct[1])}>{this.state.guess9correct[1]}</div>
                     </div>
-                    <div className="guess-zone one">
-                        <div className="score correct-spot">{this.state.guess10correct[0]}</div>
+                    <div className="guess-zone two">
+                        <div className={"score correct-spot" + this.scoreColor(this.state.guess10correct[0])}>{this.state.guess10correct[0]}</div>
                         <div className={'circle ' + this.state.guess10[0]}></div>
                         <div className={'circle ' + this.state.guess10[1]}></div>
                         <div className={'circle ' + this.state.guess10[2]}></div>
                         <div className={'circle ' + this.state.guess10[3]}></div>
-                        <div className="score correct-color">{this.state.guess10correct[1]}</div>
+                        <div className={"score correct-color " + this.scoreColor(this.state.guess10correct[1])}>{this.state.guess10correct[1]}</div>
                     </div>
                 </span>
 			</div>

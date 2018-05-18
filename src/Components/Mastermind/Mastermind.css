@@ -115,6 +115,22 @@
     font-family: 'Orbitron', sans-serif;
 }
 
+.score-one {
+    color: rgb(164, 255, 136);
+}
+
+.score-two {
+    color: rgb(119, 238, 83);
+}
+
+.score-three {
+    color: rgb(80, 204, 42);
+}
+
+.score-four {
+    color: rgb(35, 150, 0);
+}
+
 button:focus {
     outline:0;
 }
