@@ -184,21 +184,16 @@ class Mastermind extends Component {
 
     scoreColor = value => {
         switch (value) {
-            case 0:
-                return "";
-                break;
             case 1:
                 return "score-one";
-                break;
             case 2:
                 return "score-two";
-                break;
             case 3:
                 return "score-three";
-                break;
             case 4:
                 return "score-four";
-                break;
+            default:
+                return "";
         }
     }
 
