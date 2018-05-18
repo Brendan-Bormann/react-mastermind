@@ -1,13 +1,14 @@
 .Mastermind {
-    height: 1300px;
+    height: 1350px;
     width: 1000px;
     margin: 25px auto;
+    margin-bottom: 50px;
     padding: 0;
     
-    border: 5px solid rgb(22, 22, 22);
+    border: 15px double rgb(235, 235, 235);
     border-radius: 25px;
 
-    background: rgb(53, 51, 51);
+    background: rgb(53, 51, 51, .75);
 }
 
 .guess-area {
@@ -37,8 +38,11 @@
 }
 
 .submit-clear {
-    border: 0px solid black;
+    border-width: 0px 5px 5px 0px;
+    border-color: transparent rgb(19, 19, 19, .5) rgb(19, 19, 19, .5) transparent;
     border-radius: 10px;
+    width: 250px;
+
     padding: 10px;
     margin: 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -47,8 +51,25 @@
     background: rgb(22, 22, 22);
 }
 
+.submit-clear:active {
+    border-width: 0px 2.5px 2.5px 0px;
+    border-color: rgb(19, 19, 19, .5);
+    background: rgb(34, 34, 34);
+    margin-bottom: 2.5px;
+}
+
+.start {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 35px;
+    height: 112.2px;
+}
+
+.start:active {
+    margin-bottom: 10px;
+}
+
 .guesses-made {
-    height: 900px;
+    height: 950px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -70,6 +91,16 @@
 
     height: 125px;
     margin: 10px auto;
+
+    border-radius: 25px;
+}
+
+.one {
+    background: rgb(41, 41, 41);
+}
+
+.two {
+    background: rgb(59, 59, 59);
 }
 
 .score-title {
@@ -95,47 +126,73 @@ button:focus {
     width: 75px;
     height: 75px;
 
-    border: 5px solid black;
     border-radius: 100px;
-    
 }
 
-.circle-sm {
-    width: 25px;
-    height: 25px;
+.circle-lg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
 
-    border: 2px solid black;
+    border: 5px solid rgba(26, 25, 25, 0.55);
     border-radius: 100px;
+}
+
+.circle-lgr {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 125px;
+    margin-top: 10px;
+
+    border: 5px solid rgba(26, 25, 25, 0.55);
+    border-radius: 100px;
+}
+
+.placeHolder {
+    background-color: rgba(39, 38, 38, 0.65);
+    border: 5px solid rgba(26, 25, 25, 0.55);
 }
 
 .white {
+    border: 5px solid rgba(26, 25, 25, 0.55);
     background-color: white;
 }
 
 .red {
-    background-color: red;
+    border: 5px solid rgba(26, 25, 25, 0.55);
+    background-color: rgb(255, 31, 31);
 }
 
 .orange {
-    background-color: orange;
+    border: 5px solid rgba(26, 25, 25, 0.55);
+    background-color: rgb(255, 135, 22);
 }
 
 .yellow{
-    background-color: yellow;
+    border: 5px solid rgba(26, 25, 25, 0.55);
+    background-color: rgb(255, 255, 41);
 }
 
 .green {
-    background-color: green;
+    border: 5px solid rgba(26, 25, 25, 0.55);
+    background-color: rgb(23, 201, 23);
 }
 
-.blue{
-    background-color: blue;
+.blue {
+    border: 5px solid rgba(26, 25, 25, 0.55);
+    background-color: rgb(33, 33, 194);
 }
 
 .purple {
-    background-color: purple;
+    border: 5px solid rgba(26, 25, 25, 0.55);
+    background-color: rgb(145, 19, 145);
 }
 
 .black {
+    border: 5px solid rgba(26, 25, 25, 0.55);
     background-color: black;
 }

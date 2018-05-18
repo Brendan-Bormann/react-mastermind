@@ -8,7 +8,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>MASTERMIND</h1>
+				<h1 className="animated lightSpeedIn">MASTERMIND</h1>
 				<Mastermind />
 			</div>
 		);
