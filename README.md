@@ -1,6 +1,6 @@
 # **MASTERMIND**
 
-**Play it here:** https://pooks-in-boots.github.io/react-mastermind/
+**Play it here:** https://brendan-bormann.github.io/react-mastermind/
 
 ## React MasterMind
 
